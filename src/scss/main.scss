@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  font-family: 'Metrophobic', Arial, serif;
+  font-weight: 400;
+  background: #dedede;
+}
+
+a {
+  color: black;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h4 {
+  color: rgb(235, 19, 96);
+}
+
+h6 {
+  color: gray;
+}
+
+.action {
+  color: rgb(255, 170, 47);
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-default {
+  background: rgb(235, 21, 97);
+  border-color: rgb(235, 21, 97);
+
+  .navbar-text {
+    color: white;
+  }
+}
+
+.menu {
+  background: white;
+}
+
+.card {
+  background: white;
+  -webkit-box-shadow:0 0 5px 2px rgba(200, 200, 200, 0.5);
+  -moz-box-shadow:0 0 5px 2px rgba(200, 200, 200, 0.5);
+  box-shadow:0 0 5px 2px rgba(200, 200, 200, 0.5);
+
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.card-footer {
+  border-top: 1px solid #dedede;
+}
+
+.card-link {
+  display: inline-block;
+  padding: 1rem;
+}

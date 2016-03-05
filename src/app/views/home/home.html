@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg">
+          <img src="ic_menu_24px.svg" data-ng-show="!showMenu" data-ng-click="showMenu = true">
+          <img src="ic_close_24px.svg" data-ng-show="showMenu" data-ng-click="showMenu = false">
+        </a>
+        <p class="navbar-text">My books</p>
+      </div>
+    </div>
+</nav>
+<data-menu class="hidden-sm hidden-md hidden-lg" data-ng-show="showMenu"></data-menu>
+<data-menu class="visible-sm visible-md visible-lg"></data-menu>
+<div class="container-fluid">
+  <div class="col-sm-12">
+    <div class="col-sm-6 card" data-ng-hide="hidePrompt">
+      <div class="card-body">
+        <h4>Welcome back!</h4>
+        <p>It's been a while.</p>
+        <p>Read any new books lately?</p>
+      </div>
+      <div class="card-footer">
+        <a class="card-link" data-ng-click="hidePrompt = true">NO</a>
+        <a class="card-link action" data-ng-click="hidePrompt = true" data-ui-sref="home.new">YES</a>
+      </div>
+    </div>
+    <div data-ui-view></div>
+    <div class="col-sm-6 card" data-ng-repeat="book in books">
+      <div class="card-body">
+        <h5>{{book.title}}</h5>
+        <h6>By {{book.author}}</h6>
+      </div>
+      <div class="card-footer">
+        <a class="card-link">FREE SAMPLE</a>
+        <a class="card-link action">REVIEW</a>
+      </div>
+    </div>
+  </div>
+</div>
